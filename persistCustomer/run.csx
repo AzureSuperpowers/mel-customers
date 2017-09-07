@@ -14,7 +14,7 @@ public static void Run(Customer customer, TraceWriter log)
         command = @"UPDATE [dbo].[Customers] SET CompanyName = @CompanyName WHERE CustomerId = @Id";
 
         var result = db.Execute(command,customer);
-        log.Info("persistCustomer: updated {customer.CompanyName}");
+        log.Info($"persistCustomer: updated {customer.CompanyName}");
     }
 }
 
